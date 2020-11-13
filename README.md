@@ -44,6 +44,7 @@ We would like to expand our dataset to American hotels and see if we can recreat
 
 
 ## Repository Contents
+<pre>
 ├── Final\ Notebook.ipynb
 ├── README.md
 ├── data
@@ -62,3 +63,4 @@ We would like to expand our dataset to American hotels and see if we can recreat
 │   ├── total_cancel.png
 │   └── total_reservations.png
 └── readme
+</pre>
