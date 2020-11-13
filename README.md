@@ -2,8 +2,8 @@
 ![hotel](https://www.thehotelguru.com/_images/f0/30/f030e43b7ede4f4bc74c7332ae2d3711/portugal-s1180x560.jpg)
 <sub><sup>Image Credit: thehotelguru.com</sup></sub>
 
-# TL;DR:
-- In this dataset, 40% of the reservations are canceled. This canceled reservation is potentially worth €42.7 million ($50.39 million).
+# Summary:
+- In this dataset, 40% of the reservations are canceled. These canceled reservations are potentially worth €42.7 million ($50.39 million).
 - Goal: Build a model that will predict which reservations are most likely to cancel, so hotels can overbook the rooms to potentially generate more revenue. 
 - We were able to acheive 0.99 percision with Random Forest Clasifier with 0.76 accuracy and 0.51 F1 score. Best model to reduce Flase Positve since we are mostly concerned with reservation canceled section. 
 - However, it is unlikely to be implemented into production. Therefore a more balanced XGBoost model scored 0.86 precision, 0.88 accuracy and 0.84 F1 score. 
@@ -16,7 +16,7 @@ Additionally, hotels and the travel industry as whole have been hit hard by the 
 
 Our model is also optimized to decrease false positives (predicting a customer will cancel when in reality they do not cancel). By creating a model which predicts cancellations precisely, hotels can maximize their profits by overbooking with confidence. 
 
-However, we did find that models oriented for maximising the avoidance of false positives does lead to a dip in profit as then the model is reluctant to predict cancellations. As such, while a Random Forest model that scores a 0.99 precision score (which is a measure of how likely it is to produce True positives) is possible we are recommending our XG boost model which still scores a 0.86 in precision but is much more accurate. If a hotel is completely risk averse they can use the first model and take a dip in potential profits: we call this the profit-precision trade off. 
+However, we did find that models oriented for maximising the avoidance of false positives lead to a dip in profit as then the model is reluctant to predict cancellations. As such, while a Random Forest model that scores a 0.99 precision score (which is a measure of how likely it is to produce True positives) is possible we are recommending our XG boost model which still scores a 0.86 in precision but is much more accurate. If a hotel is completely risk averse they can use the first model and take a dip in potential profits: we call this the profit-precision trade off. 
 
 
 ## Data:
@@ -25,7 +25,7 @@ It consists of 119390 observations (Hotel Reservations with guest information) a
 
 ## Discovery:
 
-The overall we see there are more reservations and cancellations at the "City Hotel" when compared to the "Resort Hotel". 
+Overall we see there are more reservations and cancellations at the "City Hotel" when compared to the "Resort Hotel". 
 Although the Average Daily Rate (adr) is higher at the "City Hotel" (€105.30) comapred to the "Resort Hotel' (€94.95), people tend to stay longer at the resort with average total nights of 4.32 nights and 2.98 nights at the city hotel. 
 
 ![Total Loss](https://github.com/acoco10/Hotel-Cancellation-Model/blob/main/images/total_Revenue_Loss.png)
@@ -35,7 +35,7 @@ Over the course of three years (2015-2017) The City hotel and Resort hotel misse
 ![Revenue Loss per year](https://github.com/acoco10/Hotel-Cancellation-Model/blob/main/images/Revenue_Loss_per_Year.png)
 
 # Model Recomendation:
-Our models were focused towards amximizing precision score so we could have the least amount of false positve when our model is prediciting for hotel reservation canlations. We were able to acheive 0.99 percision with Random Forest Clasifier. However, there are draws backs to this since it drops our acuracy to correctly predict True negatives and increases our False negatives, which leaves us with 0.76 accuracy and 0.51 F1 score
+Our models were focused towards maximizing precision so we could have the least amount of false positves when our model is prediciting someone will cancek. We were able to acheive 0.99 precision score with a Random Forest Clasifier model. However, there are drawbacks to this since it drops our overall accuracy to 0.76 and results in a 0.51 F1 score.
 
 Our best performing model for balanced metrics is XGBoost with GBTree. This XGBoost model scored 0.86 precision, 0.88 accuracy and 0.84 F1 score. With this model, you are more likely to have False positives but it is also a more profitable model as its sucessfully predicts more cancellations. 
 
