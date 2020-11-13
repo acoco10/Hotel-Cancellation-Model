@@ -40,7 +40,7 @@ Our models were focused towards maximizing precision so we could have the least 
 Our best performing model for balanced metrics is XGBoost with GBTree. This XGBoost model scored 0.86 precision, 0.88 accuracy and 0.84 F1 score. With this model, you are more likely to have False positives but it is also a more profitable model as its sucessfully predicts more cancellations. 
 
 # Next Steps:
-
+We would like to expand our dataset to American hotels and see if we can recreate similar results. Perhaps by collecting more data we could also construct a model that is more balanced but still has a higher precision score. Lastly buying habits have completely changed since the pandemic, so optimizing our model when things do reopen is neccesary. 
 
 
 ## Repository Contents
