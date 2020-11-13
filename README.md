@@ -13,7 +13,7 @@ However, we did find that models oriented for maximising the avoidance of false 
 
 
 ## Data:
-Data was acquired from a research by [Antonio, Almeida and Nunes, 2019.](https://www.sciencedirect.com/science/article/pii/S2352340918315191?via%3Dihub) for Revenue Management, data analysis and Machine Learning. The dataset we worked with was cleaned by and provided by [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-11/readme.md). 
+Data was acquired from a research by [Antonio, Almeida and Nunes, 2019](https://www.sciencedirect.com/science/article/pii/S2352340918315191?via%3Dihub) for Revenue Management, data analysis and Machine Learning. The dataset we worked with was cleaned by and provided by [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-11/readme.md). 
 It consists of 119390 observations (Hotel Reservations with guest information) and 32 features. 
 
 ## Discovery:
@@ -21,7 +21,37 @@ It consists of 119390 observations (Hotel Reservations with guest information) a
 The overall we see there are more reservations and cancellations at the "City Hotel" when compared to the "Resort Hotel". 
 Although the Average Daily Rate (adr) is higher at the "City Hotel" (€105.30) comapred to the "Resort Hotel' (€94.95), people tend to stay longer at the resort with average total nights of 4.32 nights and 2.98 nights at the city hotel. 
 
-![
+![Total Loss](https://github.com/acoco10/Hotel-Cancellation-Model/blob/main/images/total_Revenue_Loss.png)
 
-![Revenue Loss](https://github.com/acoco10/Hotel-Cancellation-Model/blob/main/images/Revenue_Loss_per_Year.png)
+Over the course of three years (2015-2017) The City hotel and Resort hotel missed the opportunity of €42.7 million ($50.39 million) in cancelled reservations. City Hotel missed on €25.279 million ($29.83 million) and Resort Hotel missed out on €17.444 million ($20.58 million). 
 
+![Revenue Loss per year](https://github.com/acoco10/Hotel-Cancellation-Model/blob/main/images/Revenue_Loss_per_Year.png)
+
+# Model Recomendation:
+Our models were focused towards amximizing precision score so we could have the least amount of false positve when our model is prediciting for hotel reservation canlations. We were able to acheive 0.99 percision with Random Forest Clasifier. However, there are draws backs to this since it drops our acuracy to correctly predict True negatives and increases our False negatives, which leaves us with 0.76 accuracy and 0.51 F1 score
+
+Our best performing model for balanced metrics is XGBoost with GBTree. This XGBoost model scored 0.86 precision, 0.88 accuracy and 0.84 F1 score. With this model, you are more likely to have False positives but it is also a more profitable model as its sucessfully predicts more cancellations. 
+
+# Next Steps:
+
+
+
+## Repository Contents
+├── Final\ Notebook.ipynb
+├── README.md
+├── data
+│   └── hotel_bookings.csv
+├── data\ cleaning
+│   ├── Cancellations.ipynb
+│   ├── aidan_eda.ipynb
+│   ├── cleanedish_data.csv
+│   └── hotel_bookings.csv
+├── images
+│   ├── Revenue_Loss_per_Year.png
+│   ├── cancellation_months.png
+│   ├── cancellation_years.png
+│   ├── relationship_cancel_lt_repeated.png
+│   ├── total_Revenue_Loss.png
+│   ├── total_cancel.png
+│   └── total_reservations.png
+└── readme
