@@ -3,7 +3,7 @@
 <sub><sup>Image Credit: thehotelguru.com</sup></sub>
 
 # Summary:
-- In this dataset, 40% of the reservations are canceled. These canceled reservations are potentially worth €42.7 million ($50.39 million).
+- In this dataset, from 2015-2017, 40% of the reservations are canceled. These canceled reservations are potentially worth €42.7 million ($50.39 million).
 - Goal: Build a model that will predict which reservations are most likely to cancel, so hotels can overbook the rooms to potentially generate more revenue. 
 - We were able to acheive 0.99 percision with Random Forest Clasifier with 0.76 accuracy and 0.51 F1 score. Best model to reduce Flase Positve since we are mostly concerned with reservation canceled section. 
 - However, it is unlikely to be implemented into production. Therefore a more balanced XGBoost model scored 0.86 precision, 0.88 accuracy and 0.84 F1 score. 
