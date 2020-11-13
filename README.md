@@ -45,11 +45,11 @@ We would like to expand our dataset to American hotels and see if we can recreat
 
 ## Repository Contents
 <pre>
-├── Final\ Notebook.ipynb
+├── Final Notebook.ipynb
 ├── README.md
 ├── data
 │   └── hotel_bookings.csv
-├── data\ cleaning
+├── data cleaning
 │   ├── Cancellations.ipynb
 │   ├── aidan_eda.ipynb
 │   ├── cleanedish_data.csv
